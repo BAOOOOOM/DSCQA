@@ -40,7 +40,7 @@ torch.backends.cudnn.deterministic = True
 
 model = SentenceTransformer('sentence-transformers/sentence-t5-large',device=config.device).to(config.device)
 #Enhance the differentiation of semantic representations
-model.load_state_dict(torch.load('model/finetuned_sentence_t5_csqa.ckpt'))
+#model.load_state_dict(torch.load('model/finetuned_sentence_t5_csqa.ckpt'))
 print("The trained model was successfully loaded")
 
 def get_formal_embedding(all_embedding,need_att=True,need_token=True,need_sen=True,is_only_question=False):
